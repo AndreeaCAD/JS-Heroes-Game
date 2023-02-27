@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Heros fight</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">
+            <h1 class="welcome">WELCOME TO THE FIGHT ARENA</h1>
+        </div>
+        <button class="show-heroes">Show Heroes</button>
+        <div class="heroes-container">
+            <div class="hero">
+                <div class="single-card">
+                    <div class="front" style="background-image: url(assets/him.jpeg);"></div>
+                    <div class="back">
+                        <h2>Blue Bird Sword</h2>
+                        <img class="hero-avatar" src="assets/him.jpeg" alt="Blue Bird Sword">
+                        <dl class="super-powers">
+                            <dt>SUPER POWERS:</dt>
+                            <dl>Has a shield</dl>
+                            <dl>Magic sword</dl>
+                            <dl>HP: 50</dl>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="hero">
+                <div class="single-card">
+                    <div class="front" style="background-image: url(assets/purpleher.jpeg);"></div>
+                    <div class="back">
+                        <h2>The Purple Dragon</h2>
+                        <img class="hero-avatar" src="assets/purpleher.jpeg" alt="The Purple Dragon">
+                        <dl class="super-powers">
+                            <dt>SUPER POWERS:</dt>
+                            <dl>Can fly</dl>
+                            <dl>Is invisible</dl>
+                            <dl>HP: 60</dl>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="hero">
+                <div class="single-card">
+                    <div class="front" style="background-image: url(assets/blueher.jpeg);"></div>
+                    <div class="back">
+                        <h2>Killer Fan Queen</h2>
+                        <img class="hero-avatar" src="assets/blueher.jpeg" alt="Killer Fan Queen">
+                        <dl class="super-powers">
+                            <dt>SUPER POWERS:</dt>
+                            <dl>Killer Fans</dl>
+                            <dl>Can freeze</dl>
+                            <dl>HP: 40</dl>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="start-fight">Start Fight!</button>
+        <button class="show-winner" onclick="showAlert()">
+            Show the winner!</button>
+        <div class="box" id="myText"></div>
+        <script src="button.js"></script>
+        <script src="main.js"></script>
+</body>
+
+</html>

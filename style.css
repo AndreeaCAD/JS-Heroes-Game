@@ -1,0 +1,202 @@
+body {
+    background-image: url(assets/wallpaper.jpeg);
+    background-size: cover;
+    background-repeat: repeat;
+    background-color: #333;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .heroes-container {
+    display: none;
+    width: 100%;
+    justify-content: space-evenly;
+    align-content: center;
+    margin-top: 125px;
+  }
+  
+  .hero, .single-card {
+    height: 450px;
+    max-width: 300px;
+    margin: auto;
+    position: relative;
+  }
+
+  .hero {
+    perspective: 900px;
+  }
+
+  .single-card{
+    text-align: center;
+    transition: all 1.5s cubic-bezier(0.7, -.5, 0.3, 1.8);
+    transform-style: preserve-3d;
+  }
+
+  .hero:hover .single-card{
+    transform: rotateY(180deg);
+  }
+
+  .front,
+  .back {
+    width: 300px;
+    position: relative;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+  }
+  .front {
+    cursor: pointer;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 50px;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .back {
+    transform: rotateY(180deg);
+    position: absolute;
+    border-radius: 50px;
+    height: 450px;
+    background: rgba(227, 153, 153, 0.5);
+
+  }
+  .show-heroes, 
+  .start-fight,
+  .show-winner {
+    width: 400px;
+    color: #fff;
+    padding: 15px 25px;
+    background-color: rgba(227, 153, 153, 0.5);
+    background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+    box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25), inset 0px 3px 9px rgba(255, 255, 255, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.6), inset 0px -8px 36px rgba(0, 0, 0, 0.3), inset 0px 1px 5px rgba(255, 255, 255, 0.6), 2px 19px 31px rgba(0, 0, 0, 0.2);
+    border-radius: 14px;
+    font-weight: bold;
+    font-size: 20px;
+    border: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    cursor: pointer;
+  }
+  .show-heroes {
+    display: block;
+    margin-top: 400px;
+    position: absolute;
+  }
+  .start-fight {
+    display: none;
+    margin-top: 50px;
+  }
+.show-winner {
+  display: none;
+  margin-top: 400px;
+}
+.box {
+  display: none;
+  border: 2px solid rgba(227, 153, 153, 0.5);;
+  padding: 2em;
+  width: 30%;
+  text-align: center;
+  color: #E25D52;
+  font-size: 30px;
+  font-weight: bold;
+  box-shadow: 0 0 25px 10px rgba(0, 0, 0, .25);
+  margin-top: 250px;
+}
+.d-flex {
+  display: flex;
+}
+
+.d-none {
+  display: none;
+}
+.d-block {
+  display: block;
+}
+.title {
+  margin-bottom: 50px;
+  display: block;
+}
+  .welcome {
+    position:absolute;
+    text-align: center;
+    /* left: 50%;
+    top: 50%; */
+    font-size: 46px;
+    /* background: -webkit-linear-gradient(rgb(39, 55, 111),rgb(217, 224, 118), #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    margin-top: 300px;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(-45deg, #DFB79E, #DFB79E, #2B0413, #2B0413, #E25D52, #E25D52);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animated_text 6s ease-in-out infinite;
+    -moz-animation: animated_text 6s ease-in-out infinite;
+    -webkit-animation: animated_text 6s ease-in-out infinite;
+  }
+  @keyframes animated_text {
+    0% {
+      background-position: 0px 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0px 50%;
+    }
+  }
+  .hero-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+
+
+
+
+
+  
+  @media only screen and (max-width: 767px) {
+    .heroes-container {
+      flex-direction: column;
+    }
+    .hero {
+      margin-bottom: 20px;
+    }
+    
+    body {
+      background-image: url(assets/wallpaper2.jpeg);
+      background-size: cover;
+      background-repeat: repeat;
+    }
+    .welcome {
+      text-align: center;
+      font-size: 35px;
+      margin-top: 200px;
+     }
+     h2 {
+      color: #fff;
+     }
+     .back {
+      background: rgba(21, 19, 40, 0.5);
+     }
+     .super-powers {
+      color: #fff;
+     }
+     .show-heroes, 
+     .start-fight, 
+     .show-winner {
+      width: 200px;
+     }
+     .box {
+      color: #fff;
+      box-shadow: 0 0 25px 10px rgba(244, 240, 240, 0.25);
+     }
+  }
+
+
